@@ -31,10 +31,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px; /* Asegurarse de que el padding sea consistente */
   border-radius: 5px;
   position: fixed;
+  top: 0; /* Asegúrate de que esté fijo en la parte superior */
+  left: 50%; /* Centramos el navbar horizontalmente */
+  transform: translateX(-50%); /* Corrige el centrado horizontal */
 }
 
 .navbar_logo {
@@ -43,7 +45,7 @@ main {
 
 .navbar_logo img,
 .navbar_items_container {
-  width: 100%;
+  width: auto; /* Ajusta el ancho automático si es necesario */
 }
 
 .navbar_items {
@@ -51,8 +53,6 @@ main {
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  width: 100%;
-  height: 100%;
 }
 
 .navbar_item {
