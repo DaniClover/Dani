@@ -50,6 +50,7 @@ main {
 .navbar_logo {
   display: flex;
   align-items: center; /* Asegura que el logo esté verticalmente centrado */
+  width: 35px;
 }
 
 .navbar_logo img {
