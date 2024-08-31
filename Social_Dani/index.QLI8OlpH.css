@@ -177,12 +177,18 @@ footer {
   background-color: var(--background-component);
   border: 1px solid var(--border-color);
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
   align-items: center;
-  gap: 20px; /* Espacio entre los elementos del footer */
+  padding: 0 20px;
 }
 
-/* Estilo de los enlaces en el footer */
+.footer_text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+/* Enlaces de contactar en el footer */
 .footer_social_links {
   display: flex;
   align-items: center;
@@ -208,12 +214,6 @@ footer {
 .footer_social_link svg {
   width: 20px; /* Tamaño de los iconos */
   height: 20px;
-}
-
-.footer_text {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--accent-color);
 }
 
 /* Cursor */
