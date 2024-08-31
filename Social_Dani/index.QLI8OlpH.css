@@ -1,3 +1,10 @@
+/* Estilos generales */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   width: 85%;
@@ -31,30 +38,39 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px; /* Asegurarse de que el padding sea consistente */
+  padding: 0 10px;
   border-radius: 5px;
   position: fixed;
-  top: 0; /* Asegúrate de que esté fijo en la parte superior */
-  left: 50%; /* Centramos el navbar horizontalmente */
-  transform: translateX(-50%); /* Corrige el centrado horizontal */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* Logo */
 .navbar_logo {
-  width: 35px;
+  display: flex;
+  align-items: center; /* Asegura que el logo esté verticalmente centrado */
 }
 
-.navbar_logo img,
+.navbar_logo img {
+  height: 40px; /* Ajusta la altura del logo */
+}
+
+/* Contenedor de los elementos del navbar */
 .navbar_items_container {
-  width: auto; /* Ajusta el ancho automático si es necesario */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinea los enlaces al final del contenedor */
+  gap: 10px; /* Espacio entre los enlaces */
 }
 
 .navbar_items {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 10px;
 }
 
+/* Enlaces del navbar */
 .navbar_item {
   display: flex;
   padding: 5px 15px;
@@ -137,10 +153,6 @@ main {
     transition: background-color 0.3s ease-in-out;
   }
 
-  .navbar_item a {
-    height: 20px;
-  }
-
   #hamburger:checked ~ .navbar_items_container {
     display: block;
   }
@@ -153,10 +165,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--background); /* Asegúrate de que el fondo del footer sea consistente */
 }
 
 .footer_container {
   width: 100%;
+  max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
   height: 60px;
   border-radius: 5px;
   background-color: var(--background-component);
@@ -164,6 +178,35 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px; /* Espacio entre los elementos del footer */
+}
+
+/* Estilo de los enlaces en el footer */
+.footer_social_links {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre los iconos */
+}
+
+.footer_social_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Tamaño fijo para los iconos */
+  height: 30px;
+  border-radius: 50%;
+  color: #d4d4d4;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer_social_link:hover {
+  background-color: var(--background-component-selected);
+  color: var(--accent-color); /* Cambia el color del icono al pasar el ratón */
+}
+
+.footer_social_link svg {
+  width: 20px; /* Tamaño de los iconos */
+  height: 20px;
 }
 
 .footer_text {
