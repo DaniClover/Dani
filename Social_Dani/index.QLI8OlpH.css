@@ -1,4 +1,4 @@
-/* Estilos generales */
+¿/* Estilos generales */
 body,
 html {
   height: 100%;
@@ -161,12 +161,15 @@ main {
 
 /* Footer */
 footer {
-  width: 100%;
+  width: 85%;
   height: 100px;
+  margin-top: 20px; /* Asegura separación del contenido superior */
+  border: 1px solid var(--border-color);
+  background-color: var(--navbar-background);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background); /* Asegúrate de que el fondo del footer sea consistente */
+  position: relative;
 }
 
 .footer_container {
