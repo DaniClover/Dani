@@ -1,4 +1,4 @@
-/* Reseteo básico y configuración general */
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +12,17 @@ body {
   background: #f4f4f4;
 }
 
-header, footer {
+/* Encabezado */
+header {
   background: #333;
   color: #fff;
   padding: 1em;
   text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
 /* Navegación */
@@ -39,10 +45,11 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #ddd;
 }
 
 /* Contenido principal */
@@ -63,6 +70,7 @@ button {
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
@@ -88,6 +96,7 @@ input[type="submit"] {
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 input[type="submit"]:hover {
