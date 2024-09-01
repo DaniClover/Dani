@@ -171,18 +171,22 @@ footer[data-astro-cid-sz7xmlte] {
 }
 
 /* Custom Cursor Styles */
-.cursor {
-  border: 1px solid var(--border-color);
+.cursor, .cursor_pointer {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
   pointer-events: none;
   transform: translate(-50%, -50%);
+}
+
+.cursor {
+  border: 1px solid var(--border-color);
+  width: 20px;
+  height: 20px;
   border-radius: 10%;
   background-color: var(--background-component);
   backdrop-filter: blur(1px);
+  transition: transform 0.2s ease;
 }
 
 .cursor_pointer {
@@ -190,42 +194,78 @@ footer[data-astro-cid-sz7xmlte] {
   height: 5px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
 }
 
-/* Global Styles */
+body:active .cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax Background */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --background: #0c0c0c;
+  --navbar-background: rgba(13, 13, 13, 0.95);
+  --background-component: #0f0f0f63;
+  --background-component-selected: #1a1a1a63;
+  --background-style-color: #242424;
+  --accent-color: #b8b8b8;
+  --border-color: #1c1d20;
+}
+::-webkit-scrollbar {
+  visibility: hidden;
+}
 html {
-  background: var(--background);
-  background-image: radial-gradient(circle at 0 0, var(--background-style-color) 1px, transparent 1px);
-  background-size: 16px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+background: var(--background);
+background-image: radial-gradient(
+  circle at 0 0,
+  var(--background-style-color) 1px,
+  transparent 1px
+);
+background-size: 16px 16px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
-
 body {
-  width: 85%;
+width: 85%;
 }
-
-body, html {
-  height: 100%;
+body,
+html {
+height: 100%;
 }
-
 main {
-  margin-top: 90px;
-  min-height: 72vh;
+margin-top: 90px;
+min-height: 72vh;
 }
-
 hr {
-  height: 1px;
-  border: 0;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-image: -webkit-linear-gradient(left, transparent, var(--border-color), transparent);
+height: 1px;
+border: 0;
+width: 100%;
+margin-top: 20px;
+margin-bottom: 20px;
+background-image: -webkit-linear-gradient(
+  left,
+  transparent,
+  var(--border-color),
+  transparent
+);
 }
