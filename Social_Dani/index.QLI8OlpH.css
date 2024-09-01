@@ -160,29 +160,27 @@ main {
 }
 
 /* Footer */
-footer {
+footer[data-astro-cid-sz7xmlte] {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background); /* Asegúrate de que el fondo del footer sea consistente */
 }
-
-.footer_container {
+.footer_container[data-astro-cid-sz7xmlte] {
   width: 100%;
-  max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
-  height: 60px;
   border-radius: 5px;
+  height: 60px;
   background-color: var(--background-component);
   border: 1px solid var(--border-color);
   display: flex;
-  justify-content: space-between; /* Alinea los elementos a los extremos */
+  justify-content: center;
   align-items: center;
-  padding: 0 20px;
 }
-
-.footer_text {
+.footer_text[data-astro-cid-sz7xmlte] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--accent-color);
@@ -239,7 +237,7 @@ footer {
 
 .card_social .card_social_links {
   display: flex;
-  gap: 10px;
+  gap: 10%;
 }
 
 .card_social .card_social_link {
