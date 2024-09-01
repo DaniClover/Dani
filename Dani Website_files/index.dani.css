@@ -175,6 +175,7 @@ footer[data-astro-cid-sz7xmlte] {
   pointer-events: none;
 }
 
+/* Fondo de la página */
 html {
   background: var(--background);
   background-image: radial-gradient(
@@ -187,18 +188,22 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: -1; /* Asegura que el fondo esté en el nivel más bajo */
+  position: relative; /* Necesario para aplicar el z-index */
 }
+
 body {
   width: 85%;
-}
-body,
-html {
   height: 100%;
+  z-index: -1; /* Coloca el fondo detrás de otros elementos */
+  position: relative; /* Necesario para aplicar el z-index */
 }
+
 main {
   margin-top: 90px;
   min-height: 72vh;
 }
+
 hr {
   height: 1px;
   border: 0;
