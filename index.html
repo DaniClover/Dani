@@ -1,739 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" data-astro-transition="forward">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link
-      rel="stylesheet"
-      href="/Dani Website_files/index.dani.css"
-    />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/Dani Website_files/favicon-Dani.svg"
-    />
-    <meta name="generator" content="Astro v4.1.1" />
-    <meta property="og:title" content="Dani" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://media.discordapp.net/attachments/1234296018426921101/1246987798272282674/IMG_20240309_224645_249.jpg?ex=665e6363&is=665d11e3&hm=43bda955c2a8ce1b138623b36a61050dd4be25dcb4c3c6ac6a25d26b3ec71431&=&format=webp&width=414&height=414"
-    />
-    <meta property="og:description" content="🦇 wanna see my website" />
-    <meta name="theme-color" content="#000000" />
-    <link
-      as="font"
-      crossorigin=""
-      rel="preload"
-      href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf"
-      type="font/ttf"
-    />
-    <link
-      as="font"
-      crossorigin=""
-      rel="preload"
-      href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf"
-      type="font/ttf"
-    />
-    <link
-      as="font"
-      crossorigin=""
-      rel="preload"
-      href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf"
-      type="font/ttf"
-    />
-    <style>
-      @font-face {
-        font-weight: 300;
-        font-style: normal;
-        font-family: Inter;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf);
-      }
-    </style>
-    <style>
-      @font-face {
-        font-weight: 400;
-        font-style: normal;
-        font-family: Inter;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf);
-      }
-    </style>
-    <style>
-      @font-face {
-        font-weight: 500;
-        font-style: normal;
-        font-family: Inter;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf);
-      }
-    </style>
-    <style>
-      html {
-        font-family: Inter, _font_fallback_1705419878766, sans-serif;
-      }
-      @font-face {
-        font-family: _font_fallback_1705419878766;
-        size-adjust: 107.64%;
-        src: local("Arial");
-        ascent-override: 90%;
-        descent-override: 22.43%;
-        line-gap-override: 0%;
-      }
-    </style>
-    <title>Dani</title>
-    <meta name="astro-view-transitions-enabled" content="true" />
-    <meta name="astro-view-transitions-fallback" content="animate" />
-    <style>
-      .skills_card[data-astro-cid-rpinor4w] {
-        padding: 20px 30px;
-        width: 80%;
-        background-color: var(--background-component);
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-      }
-      .skills_card[data-astro-cid-rpinor4w]
-        .skills_header[data-astro-cid-rpinor4w] {
-        height: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .skills_card[data-astro-cid-rpinor4w]
-        .skills_header[data-astro-cid-rpinor4w]
-        h1[data-astro-cid-rpinor4w] {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #fff;
-      }
-      .skills_card[data-astro-cid-rpinor4w]
-        .skills_container[data-astro-cid-rpinor4w] {
-        height: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .skills_card[data-astro-cid-rpinor4w]
-        .skills_container[data-astro-cid-rpinor4w]
-        .skills_item[data-astro-cid-rpinor4w] {
-        width: 50px;
-        height: 50px;
-        border-radius: 5px;
-        background-color: var(--background-component-selected);
-        border: 1px solid var(--border-color);
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .skills_card[data-astro-cid-rpinor4w]
-        .skills_container[data-astro-cid-rpinor4w]
-        .skills_item[data-astro-cid-rpinor4w]
-        img[data-astro-cid-rpinor4w] {
-        width: 100%;
-        height: 100%;
-      }
-      @media screen and (max-width: 768px) {
-        .skills_card[data-astro-cid-rpinor4w] {
-          gap: 30px;
-          flex-direction: column;
-        }
-      }
-      .section_header[data-astro-cid-j7pv25f6] {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10vh;
-        gap: 10px;
-      }
-      .section_header[data-astro-cid-j7pv25f6] h1[data-astro-cid-j7pv25f6] {
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: var(--accent-color);
-      }
-      .section_content[data-astro-cid-j7pv25f6] {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 20px 0;
-        gap: 20px;
-      }
-   /* Centrar el contenido de la landing */
-.landing[data-astro-cid-j7pv25f6] {
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-/* Ajustes para el contenedor principal */
-.landing_container[data-astro-cid-j7pv25f6] {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Estilos del texto */
-.landing_subText[data-astro-cid-j7pv25f6] {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-}
-
-.landing_subText[data-astro-cid-j7pv25f6] h1[data-astro-cid-j7pv25f6] {
-    font-size: 1rem;
-    color: #fff;
-    transition: color 0.3s ease-in-out;
-}
-
-.landing_subText[data-astro-cid-j7pv25f6] h2[data-astro-cid-j7pv25f6] {
-    font-size: 1.1rem;
-    color: var(--accent-color);
-    transition: color 0.3s ease-in-out;
-}
-
-/* Estilos del contenedor de avatar y texto */
-.landing_about[data-astro-cid-j7pv25f6] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3%;
-    height: 50vh;
-    width: 70%;
-}
-
-/* Estilos del avatar */
-.landing_about_avatar[data-astro-cid-j7pv25f6] {
-    border-radius: 10px;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.landing_about_avatar[data-astro-cid-j7pv25f6] img[data-astro-cid-j7pv25f6] {
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-.landing_about_avatar[data-astro-cid-j7pv25f6]:hover img[data-astro-cid-j7pv25f6] {
-    transform: scale(1.1);
-}
-
-/* Estilos del texto de la bio */
-.landing_about_text[data-astro-cid-j7pv25f6] {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.landing_about_text[data-astro-cid-j7pv25f6] p[data-astro-cid-j7pv25f6] {
-    font-size: 0.95rem;
-    color: #fff;
-    transition: color 0.3s ease-in-out;
-}
-
-.landing_about_text[data-astro-cid-j7pv25f6] p[data-astro-cid-j7pv25f6] span[data-astro-cid-j7pv25f6] {
-    color: var(--accent-color);
-}
-
-/* Ajustes para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    .landing_container[data-astro-cid-j7pv25f6] {
-        height: 75vh;
-    }
-
-    .landing_about[data-astro-cid-j7pv25f6] {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .landing_about_text[data-astro-cid-j7pv25f6] {
-        width: 100%;
-        text-align: center;
-    }
-
-    .landing_about_text[data-astro-cid-j7pv25f6] p[data-astro-cid-j7pv25f6] {
-        font-size: 0.9rem;
-    }
-}
-
-
-#home {
-    border: 1px solid var(--border-color);
-    background-color: var(--background-component-selected);
-}
-
-[data-tooltip]:hover:before {
-    transform: translateY(130%);
-}
-    </style>
-    <script
-      type="module"
-      src="/Dani Website_files/hoisted.q8bteHQz.js.descarga"
-      data-astro-exec=""
-    ></script>
-  </head>
-  <body>
-    <header data-astro-cid-3ef6ksr2="">
-      <nav class="navbar" data-astro-cid-3ef6ksr2="">
-        <div class="navbar_logo" data-astro-cid-3ef6ksr2="">
-          <img
-            alt="Logo"
-            src="/Dani Website_files/logo.svg"
-            data-astro-cid-3ef6ksr2=""
-          />
-        </div>
-        <input
-          type="checkbox"
-          name="checkbox"
-          id="hamburger"
-          data-astro-cid-3ef6ksr2=""
-        />
-        <div class="navbar_items_container" data-astro-cid-3ef6ksr2="">
-          <div class="navbar_items" data-astro-cid-3ef6ksr2="">
-            <a
-              id="home"
-              href="https://dani-one.vercel.app"
-              class="navbar_item"
-              data-astro-cid-3ef6ksr2=""
-            >
-              <svg
-                width="24px"
-                height="24px"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/sv
-                g"
-                color="#d4d4d4"
-                data-astro-cid-3ef6ksr2=""
-              >
-                <path
-                  d="M9 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21H15M9 21V17C9 15.3431 10.3431 14 12 14V14C13.6569 14 15 15.3431 15 17V21M9 21H15"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-              </svg>
-              Home
-            </a>
-            <a
-              id="proyects"
-              href="#"
-              class="navbar_item"
-              data-astro-cid-3ef6ksr2=""
-            >
-              <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#d4d4d4"
-                data-astro-cid-3ef6ksr2=""
-              >
-                <path
-                  d="M18 21C19.1046 21 20 20.1046 20 19C20 17.8954 19.1046 17 18 17C16.8954 17 16 17.8954 16 19C16 20.1046 16.8954 21 18 21Z"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-                <path
-                  d="M6 7C7.10457 7 8 6.10457 8 5C8 3.89543 7.10457 3 6 3C4.89543 3 4 3.89543 4 5C4 6.10457 4.89543 7 6 7Z"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-                <path
-                  d="M6 21C7.10457 21 8 20.1046 8 19C8 17.8954 7.10457 17 6 17C4.89543 17 4 17.8954 4 19C4 20.1046 4.89543 21 6 21Z"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-                <path
-                  d="M6 7V17"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-                <path
-                  d="M18 17V7C18 7 18 5 16 5H13"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-                <path
-                  d="M15.0005 7.50012L12.5005 5.00012L15.0005 2.50012"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-              </svg>
-              Projects
-            </a>
-            <a
-              id="social"
-              href="Dani! Social.html"
-              class="navbar_item"
-              data-astro-cid-3ef6ksr2=""
-            >
-              <!--?xml version="1.0" encoding="UTF-8"?-->
-              <svg
-                width="24px"
-                height="24px"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#d4d4d4"
-                data-astro-cid-3ef6ksr2=""
-              >
-                <path
-                  d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-                <path
-                  d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
-                  stroke="#d4d4d4"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-astro-cid-3ef6ksr2=""
-                ></path>
-              </svg>
-              Social
-            </a>
-          </div>
-        </div>
-        <div class="navbar_menu_toggle" data-astro-cid-3ef6ksr2="">
-          <label id="htmlforinput" for="hamburger" data-astro-cid-3ef6ksr2="">
-            <svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              color="#d4d4d4"
-              data-astro-cid-3ef6ksr2=""
-            >
-              <path
-                d="M3 12H21"
-                stroke="#d4d4d4"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                data-astro-cid-3ef6ksr2=""
-              ></path>
-              <path
-                d="M3 6H21"
-                stroke="#d4d4d4"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                data-astro-cid-3ef6ksr2=""
-              ></path>
-              <path
-                d="M3 18H21"
-                stroke="#d4d4d4"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                data-astro-cid-3ef6ksr2=""
-              ></path>
-            </svg>
-          </label>
-        </div>
-      </nav>
+    <!-- 🔹 Navbar -->
+    <header class="navbar">
+        <div class="logo">🦇 Dani</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#socials">Redes</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-menu">☰</button>
+        <button id="mode-toggle" class="mode-toggle">🌙</button>
     </header>
+
+    <!-- 🔹 Contenido Principal -->
     <main>
-      <div class="landing" data-astro-cid-j7pv25f6="">
-        <div class="landing_container" data-astro-cid-j7pv25f6="">
-          <div class="landing_subText" data-astro-cid-j7pv25f6="">
-            <h1 data-astro-cid-j7pv25f6="">Hi, I'm</h1>
-            <h2 data-astro-cid-j7pv25f6="">🦇|Dani</h2>
-          </div>
-          <div class="landing_about" data-astro-cid-j7pv25f6="">
-            <div class="landing_about_avatar" data-astro-cid-j7pv25f6="">
-              <img
-                src="/Dani Website_files/avatar.webp"
-                alt="avatar"
-                onerror='this.src=""'
-                data-astro-cid-j7pv25f6=""
-              />
+        <section id="home" class="home-section">
+            <div class="bio">
+                <h1>Hi, I'm 🦇|Dani</h1>
+                <p>Frontend Developer | Backend Explorer | Lover of Cats & Bats</p>
             </div>
-            <div class="landing_about_text" data-astro-cid-j7pv25f6="">
-                <p data-astro-cid-j7pv25f6="">
-                    ¡Hola a todos!
-                    <span data-astro-cid-j7pv25f6="">Soy Dani</span>, un
-                    <span data-astro-cid-j7pv25f6="">programador de 18 años</span> de
-                    <span data-astro-cid-j7pv25f6="">República Dominicana</span> que
-                    <span data-astro-cid-j7pv25f6="">ama programar y se especializa en desarrollo web.</span>
-                    Tengo experiencia utilizando varios lenguajes de programación y herramientas
-                    para crear
-                    <span data-astro-cid-j7pv25f6="">sitios web profesionales y fáciles de usar</span>.
-                    Mi objetivo final es convertirme en un
-                    <span data-astro-cid-j7pv25f6="">programador exitoso en el futuro.</span>
-                  </p>
-                  
-                >
-              </p>
-            </div>
-          </div>
-          <div class="scroll" data-astro-cid-j7pv25f6="">
-            <svg
-              width="24px"
-              height="24px"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              color="#d4d4d4"
-              data-astro-cid-j7pv25f6=""
-            >
-              <path
-                d="M19 13.5L15.5 17L12 13.5"
-                stroke="#d4d4d4"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                data-astro-cid-j7pv25f6=""
-              ></path>
-              <path
-                d="M15.5 17V11C15.5 8.79086 13.7091 7 11.5 7H4.5"
-                stroke="#d4d4d4"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                data-astro-cid-j7pv25f6=""
-              ></path>
-            </svg>
-          </div>
+            <img src="img/0x000.jpg" alt="Dani Avatar" class="avatar">
+        </section>
+        
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <div class="skill">
+            <h3>Frontend</h3>
+            <ul>
+            
+                <li><img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML Icon" class="skill-icon"> HTML</li>
+                <li><img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS Icon" class="skill-icon"> CSS</li>
+                <li><img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript Icon" class="skill-icon"> JavaScript</li>
+                <li><img src="https://img.icons8.com/?size=100&id=123603&format=png&color=000000" alt="React Icon" class="skill-icon"> React</li>
+          
+                
+            </ul>
         </div>
-      </div>
-      <hr data-astro-cid-j7pv25f6="" />
-      <section data-astro-cid-j7pv25f6="">
-        <div class="section_header" data-astro-cid-j7pv25f6="">
-          <h1 data-astro-cid-j7pv25f6="">SKILLS</h1>
+        <div class="skill">
+            <h3>Backend</h3>
+            <ul>
+                <li><img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000" alt="Node Icon" class="skill-icon"> Node.js</li>
+                <li><img src="https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000" alt="Express Icon" class="skill-icon"> Express</li>
+            </ul>
         </div>
-        <div class="section_content" data-astro-cid-j7pv25f6="">
-          <div class="skills_card" data-astro-cid-rpinor4w="">
-            <div class="skills_header" data-astro-cid-rpinor4w="">
-              <h1 data-astro-cid-rpinor4w="">Frameworks</h1>
-            </div>
-            <div class="skills_container" data-astro-cid-rpinor4w="">
-              <div
-                class="skills_item"
-                data-tooltip="React"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/tsx.png"
-                  data-tooltip="React"
-                  alt="React"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-             
-              <div
-                class="skills_item"
-                data-tooltip="Nextjs"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/next.png"
-                  data-tooltip="Nextjs"
-                  alt="Nextjs"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-              <div
-                class="skills_item"
-                data-tooltip="None"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/None.png"
-                  data-tooltip="None"
-                  alt="None"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="skills_card" data-astro-cid-rpinor4w="">
-            <div class="skills_header" data-astro-cid-rpinor4w="">
-              <h1 data-astro-cid-rpinor4w="">Frontend</h1>
-            </div>
-            <div class="skills_container" data-astro-cid-rpinor4w="">
-              <div
-                class="skills_item"
-                data-tooltip="Javascript"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/js.png"
-                  data-tooltip="Javascript"
-                  alt="Javascript"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-              
-              <div
-                class="skills_item"
-                data-tooltip="HTML"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/html.png"
-                  data-tooltip="HTML"
-                  alt="HTML"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-              <div
-                class="skills_item"
-                data-tooltip="CSS"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/css.png"
-                  data-tooltip="CSS"
-                  alt="CSS"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="skills_card" data-astro-cid-rpinor4w="">
-            <div class="skills_header" data-astro-cid-rpinor4w="">
-              <h1 data-astro-cid-rpinor4w="">Dev Tools</h1>
-            </div>
-            <div class="skills_container" data-astro-cid-rpinor4w="">
-              <div
-                class="skills_item"
-                data-tooltip="Python"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/python.png"
-                  data-tooltip="python"
-                  alt="python"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-              <div
-                class="skills_item"
-                data-tooltip="Vscode"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/vscode.png"
-                  data-tooltip="Vscode"
-                  alt="Vscode"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-              <div
-                class="skills_item"
-                data-tooltip="Visual Studio"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/csproj.png"
-                  data-tooltip="Visual Studio"
-                  alt="Visual Studio"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-              <div
-                class="skills_item"
-                data-tooltip="php"
-                data-astro-cid-rpinor4w=""
-              >
-                <img
-                  src="/Dani Website_files/npm.png"
-                  data-tooltip="Php"
-                  alt="Php"
-                  data-astro-cid-rpinor4w=""
-                />
-              </div>
-            </div>
-          </div>
+        <div class="skill">
+            <h3>Dev Tools</h3>
+            <ul>
+                <li><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="Git Icon" class="skill-icon"> Git</li>
+                <li><img src="path/to/postman-icon.svg" alt="Postman Icon" class="skill-icon"> Postman</li>
+            </ul>
         </div>
-      </section>
+        <div class="skill">
+            <h3>Frameworks</h3>
+            <ul>
+                <li><img src="path/to/astro-icon.svg" alt="Astro Icon" class="skill-icon"> Astro</li>
+                <li><img src="path/to/laravel-icon.svg" alt="Laravel Icon" class="skill-icon"> Laravel</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción del proyecto...</p>
+                </div>
+                <div class="project-card">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción del proyecto...</p>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
 
-<script>
-document.addEventListener('mousemove', function(e) {
-    const cursor = document.querySelector('.cursor');
-    const cursorPointer = document.querySelector('.cursor_pointer');
+    <!-- 🔹 Scripts -->
+    <script src="js/alternar-modo.js"></script>
+    <script src="js/animaciones-proyectos.js"></script>
+    <script src="js/fade-in-scroll.js"></script>
+    <script src="js/scroll-navbar.js"></script>
+    <script src="/js/load-sections.js"></script>
 
-    if (cursor) {
-        cursor.style.top = e.clientY + 'px';
-        cursor.style.left = e.clientX + 'px';
-    }
-
-    if (cursorPointer) {
-        cursorPointer.style.top = e.clientY + 'px';
-        cursorPointer.style.left = e.clientX + 'px';
-    }
-});
-
-</script>
-
-
-    <footer data-astro-cid-sz7xmlte="">
-      <div class="footer_container" data-astro-cid-sz7xmlte="">
-        <div class="footer_text" data-astro-cid-sz7xmlte="">
-          <p data-astro-cid-sz7xmlte="">🦇 Dani</p>
-        </div>
-      </div>
+    <footer>
+        <p>© 2025 Dani's Portfolio.</p>
     </footer>
-    <div class="cursor" style="left: 1021px; top: 55px"></div>
-    <div class="cursor_pointer" style="left: 1021px; top: 55px"></div>
-    <div aria-live="assertive" aria-atomic="true" class="astro-route-announcer">
-      Dani ! Website
-    </div>
-  </body>
+
+</body>
 </html>
