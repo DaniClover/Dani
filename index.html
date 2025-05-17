@@ -1,104 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dani's Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dani | Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome para iconos -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <canvas id="bg-canvas"></canvas>
 
-    <!-- 🔹 Navbar -->
-    <header class="navbar">
-        <div class="logo">🦇 Dani</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#socials">Redes</a></li>
-            </ul>
-        </nav>
-        <button class="hamburger-menu">☰</button>
-        <button id="mode-toggle" class="mode-toggle">🌙</button>
-    </header>
+  <nav class="navbar">
+    <div class="nav-logo" style="display: flex; align-items: center; gap: 8px;">
+     <svg fill="#17a445" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.001 512.001" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M510.072,276.748c-19.461-23.042-43.672-36.53-70.013-39.007c-26.526-2.49-52.679,6.436-75.632,25.821 c-1.838,1.552-2.898,3.836-2.898,6.241c0,22.823-14.177,42.105-30.956,42.105h-29.254v-49.077c0-4.513-3.657-8.17-8.17-8.17 c-4.513,0-8.17,3.657-8.17,8.17v13.617h-57.955v-13.617c0-4.513-3.657-8.17-8.17-8.17s-8.17,3.657-8.17,8.17v49.077h-29.254 c-16.779,0-30.956-19.282-30.956-42.105c0-2.405-1.061-4.69-2.898-6.241c-22.952-19.385-49.107-28.309-75.632-25.821 c-26.341,2.476-50.551,15.964-70.013,39.007c-1.934,2.291-2.46,5.454-1.368,8.245c1.09,2.792,3.622,4.762,6.596,5.134 c14.238,1.78,26.932,8.997,35.742,20.324c8.81,11.326,12.681,25.405,10.9,39.644c-0.291,2.326,0.431,4.664,1.982,6.422 c1.551,1.756,3.782,2.763,6.125,2.763c49.748,0,93.813,33.43,107.155,81.298c0.674,2.419,2.424,4.392,4.743,5.354l74.026,30.674 v27.222c0,4.513,3.657,8.17,8.17,8.17c4.513,0,8.17-3.657,8.17-8.17v-27.222l74.026-30.674c2.319-0.962,4.068-2.935,4.743-5.354 c13.342-47.867,57.407-81.298,107.155-81.298c2.343,0,4.574-1.007,6.125-2.763c1.55-1.757,2.272-4.096,1.982-6.422 c-1.781-14.238,2.091-28.317,10.9-39.644c8.81-11.327,21.503-18.544,35.742-20.324c2.973-0.373,5.506-2.342,6.596-5.134 C512.531,282.202,512.005,279.039,510.072,276.748z M227.023,292.791h57.955v97.635c0,15.979-12.999,28.978-28.978,28.978 s-28.977-12.999-28.977-28.978V292.791z M456.204,300.421c-9.65,12.407-14.756,27.347-14.77,42.815 c-52.119,3.561-97.403,39.014-113.092,89.092L256,462.304l-72.342-29.977c-15.689-50.078-60.974-85.532-113.092-89.092 c-0.013-15.468-5.119-30.408-14.77-42.815c-8.352-10.739-19.383-18.647-31.917-23.056c32.295-29.868,74.943-31.607,110.36-3.599 c1.655,30.387,22.187,54.486,47.189,54.486h29.255v62.175c0,24.988,20.33,45.319,45.319,45.319s45.319-20.33,45.319-45.319V328.25 h29.254c25.002,0,45.535-24.099,47.189-54.486c35.416-28.006,78.064-26.268,110.36,3.599 C475.587,281.773,464.556,289.681,456.204,300.421z"></path> </g> </g> <g> <g> <path d="M256,0.002c-104.217,0-189.004,84.788-189.004,189.005c0,8.301,0.553,16.7,1.644,24.966 c0.59,4.474,4.701,7.624,9.169,7.031c4.473-0.59,7.621-4.696,7.031-9.169c-0.998-7.558-1.503-15.239-1.503-22.828 C83.336,93.8,160.793,16.344,256,16.344S428.664,93.8,428.664,189.007c0,7.59-0.505,15.271-1.503,22.828 c-0.59,4.473,2.558,8.579,7.031,9.169c0.363,0.048,0.723,0.071,1.08,0.071c4.036,0,7.547-2.991,8.09-7.103 c1.09-8.264,1.644-16.664,1.644-24.966C445.004,84.789,360.217,0.002,256,0.002z"></path> </g> </g> <g> <g> <circle cx="341.7" cy="78.409" r="8.17"></circle> </g> </g> <g> <g> <circle cx="368.934" cy="100.2" r="8.17"></circle> </g> </g> <g> <g> <path d="M207.402,122.052c-1.65-4.199-6.391-6.267-10.592-4.617s-6.267,6.391-4.617,10.592c1.498,3.814,2.257,7.828,2.257,11.932 c0,18.02-14.661,32.681-32.681,32.681c-18.02,0-32.681-14.661-32.681-32.681c0-18.02,14.661-32.681,32.681-32.681 c4.104,0,8.118,0.759,11.934,2.257c4.197,1.65,8.941-0.419,10.591-4.62c1.649-4.199-0.419-8.941-4.62-10.591 c-5.726-2.247-11.75-3.387-17.905-3.387c-27.03,0-49.021,21.991-49.021,49.021c0,27.03,21.991,49.021,49.021,49.021 s49.021-21.991,49.021-49.021C210.791,133.802,209.651,127.777,207.402,122.052z"></path> </g> </g> <g> <g> <path d="M323.5,178.438c-1.166-4.36-5.643-6.946-10.004-5.784c-4.36,1.165-6.949,5.644-5.784,10.004 c0.554,2.072,0.836,4.208,0.836,6.35c0,13.515-10.996,24.511-24.511,24.511c-13.515,0-24.511-10.996-24.511-24.511 c0-13.515,10.995-24.511,24.511-24.511c2.142,0,4.277,0.281,6.347,0.836c4.36,1.166,8.838-1.421,10.006-5.78 c1.166-4.36-1.422-8.838-5.78-10.006c-3.448-0.923-7.006-1.39-10.572-1.39c-22.526,0-40.851,18.325-40.851,40.851 c0,22.526,18.325,40.851,40.851,40.851c22.526,0,40.851-18.325,40.851-40.851C324.888,185.443,324.42,181.886,323.5,178.438z"></path> </g> </g> </g></svg>
 
-    <!-- 🔹 Contenido Principal -->
-    <main>
-        <section id="home" class="home-section">
-            <div class="bio">
-                <h1>Hi, I'm 🦇|Dani</h1>
-                <p>Frontend Developer | Backend Explorer | Lover of Cats & Bats</p>
-            </div>
-            <img src="img/0x000.jpg" alt="Dani Avatar" class="avatar">
-        </section>
-        
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-        <div class="skill">
-            <h3>Frontend</h3>
-            <ul>
-            
-                <li><img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML Icon" class="skill-icon"> HTML</li>
-                <li><img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS Icon" class="skill-icon"> CSS</li>
-                <li><img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript Icon" class="skill-icon"> JavaScript</li>
-                <li><img src="https://img.icons8.com/?size=100&id=123603&format=png&color=000000" alt="React Icon" class="skill-icon"> React</li>
-          
-                
-            </ul>
-        </div>
-        <div class="skill">
-            <h3>Backend</h3>
-            <ul>
-                <li><img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000" alt="Node Icon" class="skill-icon"> Node.js</li>
-                <li><img src="https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000" alt="Express Icon" class="skill-icon"> Express</li>
-            </ul>
-        </div>
-        <div class="skill">
-            <h3>Dev Tools</h3>
-            <ul>
-                <li><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="Git Icon" class="skill-icon"> Git</li>
-                <li><img src="path/to/postman-icon.svg" alt="Postman Icon" class="skill-icon"> Postman</li>
-            </ul>
-        </div>
-        <div class="skill">
-            <h3>Frameworks</h3>
-            <ul>
-                <li><img src="path/to/astro-icon.svg" alt="Astro Icon" class="skill-icon"> Astro</li>
-                <li><img src="path/to/laravel-icon.svg" alt="Laravel Icon" class="skill-icon"> Laravel</li>
-            </ul>
-        </div>
+      
+      <span style="font-family: 'Poppins', sans-serif;">Dani</span>
     </div>
-</section>
+    <ul class="nav-links">
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#extras">Extras</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+  
 
+  <main>
+    <section id="bio" class="bio-section">
+      <div class="bio-avatar">
+        <img src="https://cdn.discordapp.com/avatars/752946372038361191/fe3a773aba52d9d32cf8d8736fe9ca87.png?size=2048" alt="Dani Avatar" />
+      </div>
+      <div class="bio-text">
+        <h1>Hola, soy Dani 🦇</h1>
+        <p>Desarrollador apasionado por crear experiencias digitales modernas, limpias y funcionales.</p>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción del proyecto...</p>
-                </div>
-                <div class="project-card">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción del proyecto...</p>
-                </div>
-            </div>
-        </section>
+        <div class="divider">
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
 
+        <p>Me especializo en frontend, backend y diseño de interfaces. Siempre busco aprender nuevas tecnologías y mejorar mis proyectos.</p>
+        <p>Además, disfruto mucho la música y suelo compartir mi top de canciones favoritas en la sección de extras.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <h2>Mis Skills</h2>
+      <div class="skills-container"></div>
+    </section>
+
+    <section id="extras" class="extras-section">
+      <h2>Extras</h2>
+      <p>coming soon "Spotify"
+      </p>
+    </section>
+
+    <section id="contact" class="extras-section">
+      <h2>Contacto</h2>
+      <form id="contact-form" style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+        <label for="name" style="color:#ddd; font-weight:600;">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required style="padding: 0.6rem; border-radius: 6px; border: none; font-family: 'Inter', sans-serif;" />
         
-    </main>
+        <label for="email" style="color:#ddd; font-weight:600;">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu@correo.com" required style="padding: 0.6rem; border-radius: 6px; border: none; font-family: 'Inter', sans-serif;" />
+        
+        <label for="message" style="color:#ddd; font-weight:600;">Mensaje</label>
+        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" required rows="4" style="padding: 0.6rem; border-radius: 6px; border: none; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+        
+        <button type="submit" style="background-color: #1db954; color: #121212; font-weight: 700; padding: 0.8rem; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
+          Enviar
+        </button>
+      </form>
+    </section>
+  </main>
 
-    <!-- 🔹 Scripts -->
-    <script src="js/alternar-modo.js"></script>
-    <script src="js/animaciones-proyectos.js"></script>
-    <script src="js/fade-in-scroll.js"></script>
-    <script src="js/scroll-navbar.js"></script>
-    <script src="/js/load-sections.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("HRM6uhVJR1TE7lOyO"); 
+  })();
 
-    <footer>
-        <p>© 2025 Dani's Portfolio.</p>
-    </footer>
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
 
+    emailjs.sendForm("service_ntfgj2c", "template_x9sfypo", this)
+      .then(() => {
+        alert("¡Mensaje enviado con éxito! ✅");
+        this.reset();
+      }, (error) => {
+        console.log('FAILED...', error);
+        alert("❌ Error al enviar el mensaje");
+      });
+  });
+</script>
+
+  
 </body>
 </html>

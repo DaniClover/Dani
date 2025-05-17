@@ -1,0 +1,312 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  color: #1db954;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #17a445;
+}
+
+/* Fondo canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #121212;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #181818cc;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1db954;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Bio */
+.bio-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.bio-avatar img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px #1db954aa;
+}
+
+.bio-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 1s forwards ease-out;
+  animation-delay: 0.5s;
+  font-family: 'Inter', sans-serif;
+}
+
+.bio-text h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #1db954;
+  margin-bottom: 0.8rem;
+}
+
+.divider {
+  margin: 1.8rem 0;
+  text-align: center;
+  color: #1db954aa;
+  font-size: 1.8rem;
+  animation: bounceArrow 2s infinite;
+}
+
+@keyframes fadeUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Skills */
+.skills-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.skills-section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #1db954;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.skill {
+  background: #222;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #1db954aa;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 120px;
+  color: #eee;
+  font-weight: 600;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 15px #1db954ee;
+}
+
+.skill i {
+  font-size: 2rem;
+}
+
+/* Extras */
+.extras-section {
+  max-width: 900px;
+  margin: 3rem auto 5rem;
+  padding: 0 1rem;
+}
+
+.extras-section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #1db954;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.extras-section p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+/* FORMULARIO CONTACTO */
+.contact-section {
+  max-width: 600px;
+  margin: 3rem auto 5rem;
+  background: #181818cc;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #1db954aa;
+  color: #ddd;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #1db954;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-section label {
+  font-weight: 600;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #222;
+  color: #eee;
+  resize: vertical;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  outline: 2px solid #1db954;
+  background: #1a1a1a;
+}
+
+.contact-section button {
+  padding: 1rem;
+  background: #1db954;
+  border: none;
+  color: #121212;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background: #17a445;
+}
+
+#form-message {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #1db954;
+}
+
+/* PLAYLIST */
+.playlist-section {
+  max-width: 900px;
+  margin: 3rem auto 5rem;
+  padding: 0 1rem;
+}
+
+.playlist-section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #1db954;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.playlist-section ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.playlist-section li {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #333;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.playlist-section li a {
+  color: #1db954;
+  font-weight: 600;
+}
+
+.playlist-section li a:hover {
+  color: #17a445;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bio-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .bio-avatar img {
+      width: 140px;
+      height: 140px;
+  }
+
+  .bio-text {
+      max-width: 100%;
+  }
+
+  .nav-links {
+      gap: 1rem;
+  }
+}
+
